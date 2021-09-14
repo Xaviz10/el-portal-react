@@ -40,5 +40,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^2.4.0"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "arrowParens": "always",
+    "semi": true,
+    "tabWidth": 2
   }
 }
