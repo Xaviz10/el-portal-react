@@ -1,5 +1,8 @@
+import useUtils from "./utils";
+
 const useGeneralHooks = () => {
     return {
+        useUtils,
 
     }
 }

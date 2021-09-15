@@ -7,7 +7,6 @@ const useCreateReducer = () => {
             return state;
         };
     };
-
     return {
         createReducer,
     };
