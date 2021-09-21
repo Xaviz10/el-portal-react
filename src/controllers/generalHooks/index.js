@@ -1,10 +1,5 @@
-import useUtils from "./utils";
-
 const useGeneralHooks = () => {
-    return {
-        useUtils,
-
-    }
-}
+  return {};
+};
 
 export default useGeneralHooks;
