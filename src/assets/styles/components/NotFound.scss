@@ -1,0 +1,32 @@
+@import "../Vars.scss";
+
+.not-found-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh);
+    background-color: $portal-purple;
+
+}
+
+.not-found-container img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 0px 50px rgba(255, 255, 255, 0.541));
+
+}
+
+.not-found-container h1{
+    position: absolute;
+    top: calc(50% + 120px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 1.8rem;
+    color: white;
+}
+
+
+
+
