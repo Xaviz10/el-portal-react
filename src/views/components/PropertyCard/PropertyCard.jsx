@@ -1,10 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
-import "../assets/styles/components/PropertyCard.scss";
+import "../../../assets/styles/components/PropertyCard.scss";
 import propertyImg from "../assets/static/img/img-property.jpg";
-import areaIcon from "../assets/static/icons/area-icon.svg";
-import roomsIcon from "../assets/static/icons/rooms-icon.svg";
-import bathIcon from "../assets/static/icons/bath-icon.svg";
+import areaIcon from "../../../assets/static/icons/area-icon.svg";
+import roomsIcon from "../../../assets/static/icons/rooms-icon.svg";
+import bathIcon from "../../assets/static/icons/bath-icon.svg";
 
 const PropertyCard = (props) => {
 	const { title, price, code, type, details, complements, description, images } = props;
@@ -15,13 +15,16 @@ const PropertyCard = (props) => {
 		maximumFractionDigits: "0",
 	});
 	return (
-		<article className="featured-cards__property" style={{ backgroundImage: `url(${images[0]})` }}>
-			<div className="property-footer">
-				<p className="property-footer__title">
+		<article
+			className="main-property-card-container"
+			style={{ backgroundImage: `url(${images[0]})` }}
+		>
+			<div className="property-card-footer">
+				<p className="property-card-footer__title">
 					{`${title}`}
 					<span>{`${code}`}</span>
 				</p>
-				<div className="property-footer__details-preview">
+				<div className="property-card-footer__details-preview">
 					<div className="details-preview__area">
 						<span style={{ backgroundImage: `url(${areaIcon})` }}></span>
 						<p>

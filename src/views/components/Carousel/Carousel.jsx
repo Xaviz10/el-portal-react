@@ -1,8 +1,7 @@
 import React, { useRef } from "react";
-import "../assets/styles/components/Carousel.scss";
-import FindOutCard from "./FindOutCard";
-import leftArrowIcon from "../assets/static/icons/left-arrow-icon.svg";
-import rightArrowIcon from "../assets/static/icons/right-arrow-icon.svg";
+import "../../../assets/styles/components/Carousel.scss";
+import leftArrowIcon from "../../../assets/static/icons/left-arrow-icon.svg";
+import rightArrowIcon from "../../../assets/static/icons/right-arrow-icon.svg";
 
 const Carousel = () => {
 	const refScroll = useRef();
@@ -12,18 +11,13 @@ const Carousel = () => {
 	};
 
 	return (
-		<section className="main-find-out-container">
-			<section className="find-out-cards-container">
-				<div className="find-out-cards-inner-container" ref={refScroll}>
+		<section className="main-carousel-container">
+			<section className="carousel-cards-container">
+				<div className="carousel-cards-inner-container" ref={refScroll}>
 					<div className="left-scroll" onClick={() => scroll(-300)}>
 						<span style={{ backgroundImage: `url(${leftArrowIcon})` }}></span>
 					</div>
 					<div className="fake-card"></div>
-					<FindOutCard />
-					<FindOutCard />
-					<FindOutCard />
-					<FindOutCard />
-					<FindOutCard />
 					<div className="fake-card"></div>
 					<div className="right-scroll" onClick={() => scroll(300)}>
 						<span style={{ backgroundImage: `url(${rightArrowIcon})` }}></span>
