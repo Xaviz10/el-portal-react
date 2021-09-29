@@ -1,11 +1,38 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap);
 
-$theme-font:  'Roboto', sans-serif;
-$just-white: #FFFFFF;
+$theme-font: "Roboto", sans-serif;
+$just-white: #ffffff;
 $soft-white: rgba(255, 255, 255, 0.95);
 $soft-black: #4f4f4f;
 $soft-gray: #969696;
 $hard-gray: #777777;
-$portal-purple: #3E4095;
-$portal-blue: #00AFEF;
-$portal-green: #00A859;
+$portal-purple: #3e4095;
+$portal-blue: #00afef;
+$portal-green: #00a859;
+
+// imgs icons
+$leftArrowIcon: url("../static/icons/left-arrow-icon.svg");
+$rightArrowIcon: url("../static/icons/right-arrow-icon.svg");
+$areaIcon: url("../static/icons/area-icon.svg");
+$roomsIcon: url("../static/icons/rooms-icon.svg");
+$bathIcon: url("../static/icons/bath-icon.svg");
+$iconFooterElPortal: url("../static/icons/icon-header-elportal--white.svg");
+$facebookIcon: url("../astatic/icons/facebook-icon.svg");
+$instagramIcon: url("../static/icons/instagram-icon.svg");
+$whatsappIcon: url("../static/icons/whatsapp-icon.svg");
+$emailIcon: url("../static/icons/email-icon.svg");
+$phoneIcon: url("../static/icons/phone-icon.svg");
+$headerElPortalWhiteIcon: url("../static/icons/icon-header-elportal--white.svg");
+$headerElPortalBlackIcon: url("../static/icons/icon-header-elportal--black.svg");
+$hamButtonBlack: url("../static/icons/ham-button--black.svg");
+$hamButtonWhite: url("../static/icons/ham-button--white.svg");
+$closeIcon: url("../static/icons/close-icon.svg");
+$addPhotoIcon: url("../static/icons/add-photo-icon.svg");
+$parkingIcon: url("../static/icons/parking-icon.svg");
+$adminIcon: url("../static/icons/admin-icon.svg");
+$propertyYearIcon: url("../static/icons/property-year-icon.svg");
+$statusIcon: url("../static/icons/status-icon.svg");
+$flatIcon: url("../static/icons/flat-icon.svg");
+$locationIcon: url("../static/icons/location-icon.svg");
+$areaPriceIcon: url("../static/icons/area-price-icon.svg");
+$subsidyIcon: url("../static/icons/subsidy-icon.svg");

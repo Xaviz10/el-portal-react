@@ -1,56 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
 import "../assets/styles/components/Header.scss";
 import { Link } from "react-router-dom";
 
-import { navbarMenuData } from "../../../../src-old/menus/navbarMenuData.js";
-
-import classNames from "classnames"; // for join classnames
 import headerElPortalWhiteIcon from "../assets/static/icons/icon-header-elportal--white.svg";
 import headerElPortalBlackIcon from "../assets/static/icons/icon-header-elportal--black.svg";
 import hamButtonBlack from "../assets/static/icons/ham-button--black.svg";
 import hamButtonWhite from "../assets/static/icons/ham-button--white.svg";
 import closeIcon from "../assets/static/icons/close-icon.svg";
+import useControllers from "../../../controllers";
 
 const Header = () => {
-	const isHome = useSelector((state) => state.home);
-
-	const [currentHeaderClass, setHeaderClass] = useState(
-		isHome ? classNames("header-container", "transparent") : "header-container",
-	);
-	const [headerIcons, setHeaderIcons] = useState(isHome ? true : false);
-	const [sideNavbar, setSideNavbar] = useState({
-		toggle: false,
-		class: "header__menu--side-navbar",
-	});
-
-	useEffect(() => {
-		navbarStatus();
-	}, [isHome]);
-
-	const navbarStatus = () => {
-		if ((isHome && window.scrollY >= 80) || !isHome) {
-			setHeaderIcons(false);
-			setHeaderClass("header-container");
-		} else if (isHome && window.scrollY < 80) {
-			setHeaderIcons(true);
-			setHeaderClass(classNames("header-container", "transparent"));
-		}
-	};
-
-	const sideNavbarToggle = () => {
-		if (!sideNavbar.toggle) {
-			setSideNavbar({
-				toggle: !sideNavbar.toggle,
-				class: classNames("header__menu--side-navbar", "active"),
-			});
-		} else {
-			setSideNavbar({ toggle: !sideNavbar.toggle, class: "header__menu--side-navbar" });
-		}
-	};
-
-	window.addEventListener("scroll", navbarStatus);
-
+	const { useComponentsHooks } = useControllers();
+	const { useHeader } = useComponentsHooks();
+	const { navbarMenuData, currentHeaderClass, headerIcons } = useHeader();
 	return (
 		<header className={currentHeaderClass}>
 			<Link to="/" className="header__logo">

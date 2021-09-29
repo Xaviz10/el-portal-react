@@ -1,10 +1,10 @@
 import usePropertiesReducers from "./properties";
 
 const useReducers = () => {
-    return {
-        usePropertiesReducers,
-
-    }
-}
+	const { featuredProperties } = usePropertiesReducers();
+	return {
+		featuredProperties,
+	};
+};
 
 export default useReducers;
