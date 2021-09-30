@@ -2,7 +2,7 @@ import useHelpers from "../../../helpers";
 import useStrings from "../../../strings";
 import useIntialStates from "../../initialStates";
 
-const usePropertiesReducers = () => {
+const useFindOutCardsReducers = () => {
 	//Helpers
 	const { useCreateReducer } = useHelpers();
 	const { createReducer } = useCreateReducer();
@@ -12,16 +12,9 @@ const usePropertiesReducers = () => {
 
 	//InitalStates
 	const { usePropertiesInitialStates } = useIntialStates();
-	const { featuredPropertiesInitialState } = usePropertiesInitialStates();
+	const { useFindOutCardsInitialStates } = usePropertiesInitialStates();
 
-	const featuredProperties = createReducer(featuredPropertiesInitialState, {
-		[GET_FEATURED_PROPERTIES](state) {
-			return {
-				...state,
-			};
-		},
-	});
-	return { featuredProperties };
+	return {};
 };
 
-export default usePropertiesReducers;
+export default useFindOutCardsReducers;

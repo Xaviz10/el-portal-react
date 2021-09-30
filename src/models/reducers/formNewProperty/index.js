@@ -1,8 +1,5 @@
 const useFormNewPropertyReducers = () => {
-
-    return {
-
-    }
+	return {};
 };
 
 export default useFormNewPropertyReducers;
