@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useSelector, useDispatch } from "react-redux";
-import { setHeaderHome, setImagePreviewUpload } from "../actions";
-import "../assets/styles/components/NewPropertyForm.scss";
+// import { setHeaderHome, setImagePreviewUpload } from "../../../api/actions";
+import "../../../assets/styles/components/NewPropertyForm.scss";
 
 const NewPropertyForm = () => {
 	const dispatch = useDispatch();
@@ -11,15 +11,15 @@ const NewPropertyForm = () => {
 
 	console.log(Boolean(imagesPreview.length));
 
-	useEffect(() => {
-		dispatch(setHeaderHome(false));
-	}, []);
+	// useEffect(() => {
+	// 	dispatch(setHeaderHome(false));
+	// }, []);
 
-	const handlePreviewNewImage = (event) => {
-		dispatch(
-			setImagePreviewUpload(URL.createObjectURL(event.target.files[0]), event.target.files[0]),
-		);
-	};
+	// const handlePreviewNewImage = (event) => {
+	// 	dispatch(
+	// 		setImagePreviewUpload(URL.createObjectURL(event.target.files[0]), event.target.files[0]),
+	// 	);
+	// };
 
 	const onSubmit = (data) => {
 		console.log(data);

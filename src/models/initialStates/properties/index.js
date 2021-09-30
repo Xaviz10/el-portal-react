@@ -505,7 +505,7 @@ const usePropertiesInitialStates = () => {
 		{
 			title: "Casa en El Recreo, Sogamoso",
 			price: 160000000,
-			code: "C21002",
+			code: "C21011",
 			type: "Venta",
 			details: {
 				area: 120,
@@ -551,7 +551,7 @@ const usePropertiesInitialStates = () => {
 			featured_property: false,
 			title: "Casa en El Recreo, Sogamoso",
 			price: 280000000,
-			code: "C21011",
+			code: "C21012",
 			type: "Venta",
 			details: {
 				area: 120,
@@ -597,7 +597,7 @@ const usePropertiesInitialStates = () => {
 			featured_property: true,
 			title: "Casa en El Recreo, Sogamoso",
 			price: 180000000,
-			code: "C21012",
+			code: "C21013",
 			type: "Venta",
 			details: {
 				area: 120,
@@ -643,7 +643,7 @@ const usePropertiesInitialStates = () => {
 			featured_property: false,
 			title: "Casa en El Recreo, Sogamoso",
 			price: 80000000,
-			code: "C21013",
+			code: "C21014",
 			type: "Venta",
 			details: {
 				area: 120,
@@ -689,7 +689,7 @@ const usePropertiesInitialStates = () => {
 			featured_property: false,
 			title: "Casa en El Recreo, Sogamoso",
 			price: 280000000,
-			code: "C21014",
+			code: "C21015",
 			type: "Venta",
 			details: {
 				area: 120,

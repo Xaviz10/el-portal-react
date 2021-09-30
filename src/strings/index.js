@@ -1,9 +1,9 @@
-import useTypes from "./types"
+import useTypes from "./types";
 
 const useStrings = () => {
-    return {
-        useTypes,
-    }
-}
+	return {
+		useTypes,
+	};
+};
 
 export default useStrings;

@@ -1,6 +1,7 @@
 import "../../../assets/styles/components/SearchContainer.scss";
 import searchContainerImg from "../../../assets/static/img/search-portal-img.jpg";
 import searchIcon from "../../../assets/static/icons/search-icon.svg";
+import { Link } from "react-router-dom";
 
 const SearchContainer = () => {
 	return (
@@ -13,15 +14,10 @@ const SearchContainer = () => {
 			<form className="search__form" action="">
 				<label className="search-keyword">
 					<span style={{ backgroundImage: `url(${searchIcon})` }}></span>
-					<input
-						type="search"
-						ref={searchBarRef}
-						onChange={handleKeywordSearch}
-						placeholder="Busca por código, zona, barrio..."
-					/>
+					<input type="search" placeholder="Busca por código, zona, barrio..." />
 				</label>
 				<label className="search-rooms">
-					<select name="" id="" ref={roomsNumberRef} onChange={handleKeywordSearch}>
+					<select name="" id="">
 						<option defaultValue value="none">
 							Habitaciones
 						</option>
@@ -32,7 +28,7 @@ const SearchContainer = () => {
 					</select>
 				</label>
 				<label className="search-type">
-					<select name="" id="" ref={typeRef} onChange={handleKeywordSearch}>
+					<select name="" id="">
 						<option defaultValue value="none">
 							Tipo
 						</option>
@@ -40,9 +36,7 @@ const SearchContainer = () => {
 						<option>Arriendo</option>
 					</select>
 				</label>
-				<Link to={`/search/${searchFilter}`} className="search-redirect-link">
-					<button className="search-button">Buscar</button>
-				</Link>
+				<button className="search-button">Buscar</button>
 			</form>
 		</section>
 	);

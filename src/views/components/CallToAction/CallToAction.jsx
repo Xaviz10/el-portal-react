@@ -1,6 +1,6 @@
 import React from "react";
-import "../assets/styles/components/CallToAction.scss";
-import callToActionBackgroundImg from "../assets/static/img/call-to-action-img.jpg";
+import "../../../assets/styles/components/CallToAction.scss";
+import callToActionBackgroundImg from "../../../assets/static/img/call-to-action-img.jpg";
 
 const CallToAction = () => {
 	return (
@@ -11,7 +11,7 @@ const CallToAction = () => {
 			<h3 className="call-to-action__question">
 				¿Tienes un inmueble que necesitas vender, arrendar o empeñar?
 			</h3>
-			<a href="#" className="call-to-action__contacts">
+			<a href="/" className="call-to-action__contacts">
 				<span>Contáctanos</span>
 			</a>
 			<p className="call-to-action__img-autor">Mattia Astorino</p>

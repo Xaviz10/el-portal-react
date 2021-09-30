@@ -78,7 +78,7 @@
 	width: 8vh;
 	height: 8vh;
 
-	background-image: $addPhotoIcon;
+	background-image: url("../../static/icons/add-photo-icon.svg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -229,35 +229,35 @@
 }
 
 .new-property__area span {
-	background-image: $areaIcon;
+	background-image: url("../../static/icons/area-icon.svg");
 }
 
 .new-property__rooms span {
-	background-image: $roomsIcon;
+	background-image: url("../../static/icons/rooms-icon.svg");
 }
 
 .new-property__bathrooms span {
-	background-image: $bathIcon;
+	background-image: url("../../static/icons/bath-icon.svg");
 }
 
 .new-property__parking span {
-	background-image: $parkingIcon;
+	background-image: url("../../static/icons/parking-icon.svg");
 }
 
 .new-property__admin-value span {
-	background-image: $adminIcon;
+	background-image: url("../../static/icons/admin-icon.svg");
 }
 
 .new-property__year span {
-	background-image: $propertyYearIcon;
+	background-image: url("../../static/icons/property-year-icon.svg");
 }
 
 .new-property__status-level span {
-	background-image: $statusIcon;
+	background-image: url("../../static/icons/status-icon.svg");
 }
 
 .new-property__flat span {
-	background-image: $flatIcon;
+	background-image: url("../../static/icons/flat-icon.svg");
 }
 
 .form__property-aditional-characteristics {
@@ -357,7 +357,7 @@
 	width: 20px;
 	height: 20px;
 
-	background-image: $locationIcon;
+	background-image: url("../../static/icons/location-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;

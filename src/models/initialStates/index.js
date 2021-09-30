@@ -1,9 +1,9 @@
-import usePropertiesInitialStates from "./properties"
+import usePropertiesInitialStates from "./properties";
 
 const useIntialStates = () => {
-    return {
-        usePropertiesInitialStates,
-    }
+	return {
+		usePropertiesInitialStates,
+	};
 };
 
 export default useIntialStates;

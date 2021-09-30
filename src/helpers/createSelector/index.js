@@ -11,11 +11,11 @@ import { isEqual } from "lodash";
   URL: https://www.npmjs.com/package/reselect
 */
 const useCreateSelector = () => {
-    const createSelector = createSelectorCreator(defaultMemoize, isEqual);
+	const createSelector = createSelectorCreator(defaultMemoize, isEqual);
 
-    return {
-        createSelector,
-    };
+	return {
+		createSelector,
+	};
 };
 
 export default useCreateSelector;

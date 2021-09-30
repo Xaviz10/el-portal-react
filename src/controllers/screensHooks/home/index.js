@@ -25,7 +25,7 @@ const useHome = () => {
 	//Set featured properties to showing
 	useEffect(() => {
 		setFeaturedPropertiesToShow(featuredProperties);
-	}, [featuredProperties]);
+	}, [featuredProperties[0]]);
 
 	return {
 		featuredPropertiesToShow,

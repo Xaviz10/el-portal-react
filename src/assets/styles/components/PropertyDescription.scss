@@ -224,7 +224,7 @@
 	width: 30px;
 	height: 30px;
 
-	background-image: $areaIcon;
+	background-image: url("../../static/icons/area-icon.svg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -260,7 +260,7 @@
 	width: 30px;
 	height: 30px;
 
-	background-image: $roomsIcon;
+	background-image: url("../../static/icons/rooms-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -296,7 +296,7 @@
 	width: 30px;
 	height: 30px;
 
-	background-image: $bathIcon;
+	background-image: url("../../static/icons/bath-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -332,7 +332,7 @@
 	width: 30px;
 	height: 30px;
 
-	background-image: $iconFooterElPortal;
+	background-image: url("../../static/icons/icon-header-elportal--white.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -383,42 +383,42 @@
 }
 
 .complement__area-price span {
-	background-image: $areaPriceIcon;
+	background-image: url("../../static/icons/area-price-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 .complement__administration span {
-	background-image: $adminIcon;
+	background-image: url("../../static/icons/admin-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 .complement__year span {
-	background-image: $propertyYearIcon;
+	background-image: url("../../static/icons/property-year-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 .complement__status-level span {
-	background-image: $statusIcon;
+	background-image: url("../../static/icons/status-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 .complement__flat span {
-	background-image: $flatIcon;
+	background-image: url("../../static/icons/flat-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
 .complement__subsidy span {
-	background-image: $subsidyIcon;
+	background-image: url("../../static/icons/subsidy-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;

@@ -6,7 +6,7 @@ const usePropertiesSelectors = () => {
 	const { createSelector } = useCreateSelector();
 
 	const feturedPropertiesSelector = createSelector(
-		(state) => state.feturedProperties,
+		(state) => state.featuredProperties,
 		(featuredProperties) => {
 			return {
 				...featuredProperties,

@@ -15,11 +15,12 @@ const Home = () => {
 	return (
 		<>
 			<SearchContainer />
-			<Suspense fallback={<h1>Loading Carousel</h1>}>
+			<Suspense fallback={<div>Loading... </div>}>
 				<Carousel>
 					{_.map(featuredPropertiesToShow, (property) => {
 						return (
 							<PropertyCard
+								key={property.code}
 								title={property.title}
 								price={property.price}
 								code={property.code}
