@@ -1,19 +1,10 @@
 import React from "react";
-import { connect } from "react-redux";
 import "../../../assets/styles/components/PropertyCard.scss";
-import propertyImg from "../assets/static/img/img-property.jpg";
-import areaIcon from "../../../assets/static/icons/area-icon.svg";
-import roomsIcon from "../../../assets/static/icons/rooms-icon.svg";
-import bathIcon from "../../assets/static/icons/bath-icon.svg";
+import useHelpers from "../../../helpers";
 
-const PropertyCard = (props) => {
-	const { title, price, code, type, details, complements, description, images } = props;
-	// Create our number formatter.
-	let formatterCurrency = new Intl.NumberFormat("es-CO", {
-		style: "currency",
-		currency: "COP",
-		maximumFractionDigits: "0",
-	});
+const PropertyCard = ({ title, price, code, type, details, images }) => {
+	const { useQuickFunctions } = useHelpers();
+	const { formatterCurrency } = useQuickFunctions();
 	return (
 		<article
 			className="main-property-card-container"
@@ -26,17 +17,17 @@ const PropertyCard = (props) => {
 				</p>
 				<div className="property-card-footer__details-preview">
 					<div className="details-preview__area">
-						<span style={{ backgroundImage: `url(${areaIcon})` }}></span>
+						<span></span>
 						<p>
 							{`${details.area}`} m<sup>2</sup>
 						</p>
 					</div>
 					<div className="details-preview__rooms">
-						<span style={{ backgroundImage: `url(${roomsIcon})` }}></span>
+						<span></span>
 						<p>{`${details.rooms}`} habs. </p>
 					</div>
 					<div className="details-preview__baths">
-						<span style={{ backgroundImage: `url(${bathIcon})` }}></span>
+						<span></span>
 						<p>{`${details.bathrooms}`} b.</p>
 					</div>
 					<div className="details-preview__price">

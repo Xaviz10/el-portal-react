@@ -2,19 +2,6 @@ import React from "react";
 import "../../../assets/styles/components/PropertyDescription.scss";
 import PropertyDescriptionSlider from "./PropertyDescriptionSlider";
 
-import addPhotoIcon from "../assets/static/icons/add-photo-icon.svg";
-import areaIcon from "../assets/static/icons/area-icon.svg";
-import roomsIcon from "../assets/static/icons/rooms-icon.svg";
-import bathIcon from "../assets/static/icons/bath-icon.svg";
-import parkingIcon from "../assets/static/icons/parking-icon.svg";
-import areaPriceIcon from "../assets/static/icons/area-price-icon.svg";
-import adminIcon from "../assets/static/icons/admin-icon.svg";
-import propertyYearIcon from "../assets/static/icons/property-year-icon.svg";
-import statusIcon from "../assets/static/icons/status-icon.svg";
-import flatIcon from "../assets/static/icons/flat-icon.svg";
-import subsidyIcon from "../assets/static/icons/subsidy-icon.svg";
-import locationIcon from "../assets/static/icons/location-icon.svg";
-
 const PropertyDescription = (props) => {
 	const { title, price, code, type, details, complements, description, images } = props;
 	// Create our number formatter.

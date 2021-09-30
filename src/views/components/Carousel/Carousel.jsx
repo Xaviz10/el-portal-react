@@ -1,26 +1,31 @@
-import React, { useRef } from "react";
+import React from "react";
 import "../../../assets/styles/components/Carousel.scss";
-import leftArrowIcon from "../../../assets/static/icons/left-arrow-icon.svg";
-import rightArrowIcon from "../../../assets/static/icons/right-arrow-icon.svg";
+import useControllers from "../../../controllers";
 
-const Carousel = () => {
-	const refScroll = useRef();
+const Carousel = ({ children }) => {
+	//Controllers
+	const { useComponentsHooks } = useControllers();
+	const { useCarousel } = useComponentsHooks();
+	const { refScroll, scroll } = useCarousel();
 
-	const scroll = (scrollOffset) => {
-		refScroll.current.scrollLeft += scrollOffset;
-	};
+	// //Models
+	// const { useSelectors } = useModels();
+	// const { useSelector, usePropertiesSelectors } = useSelectors();
+	// const { feturedPropertiesSelector } = usePropertiesSelectors();
+	// const { featuredProperties } = useSelector(featuredPropertiesSelector);
 
 	return (
 		<section className="main-carousel-container">
 			<section className="carousel-cards-container">
 				<div className="carousel-cards-inner-container" ref={refScroll}>
 					<div className="left-scroll" onClick={() => scroll(-300)}>
-						<span style={{ backgroundImage: `url(${leftArrowIcon})` }}></span>
+						<span></span>
 					</div>
 					<div className="fake-card"></div>
+					{children}
 					<div className="fake-card"></div>
 					<div className="right-scroll" onClick={() => scroll(300)}>
-						<span style={{ backgroundImage: `url(${rightArrowIcon})` }}></span>
+						<span></span>
 					</div>
 				</div>
 			</section>

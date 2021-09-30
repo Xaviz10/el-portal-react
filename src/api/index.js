@@ -1,10 +1,9 @@
 import useActions from "./actions";
 
 const useApi = () => {
-    return {
-        useActions,
-
-    }
-}
+	return {
+		useActions,
+	};
+};
 
 export default useApi;
