@@ -1,5 +1,9 @@
+import useHome from "./home";
+
 const useScreensHooks = () => {
-	return {};
+	return {
+		useHome,
+	};
 };
 
 export default useScreensHooks;
