@@ -1,12 +1,12 @@
 import React from "react";
 
-import "../assets/styles/components/Footer.scss";
-import iconFooterElPortal from "../assets/static/icons/icon-header-elportal--white.svg";
-import facebookIcon from "../assets/static/icons/facebook-icon.svg";
-import instagramIcon from "../assets/static/icons/instagram-icon.svg";
-import whatsappIcon from "../assets/static/icons/whatsapp-icon.svg";
-import emailIcon from "../assets/static/icons/email-icon.svg";
-import phoneIcon from "../assets/static/icons/phone-icon.svg";
+import "../../../assets/styles/components/Footer.scss";
+import iconFooterElPortal from "../../../assets/static/icons/icon-header-elportal--white.svg";
+import facebookIcon from "../../../assets/static/icons/facebook-icon.svg";
+import instagramIcon from "../../../assets/static/icons/instagram-icon.svg";
+import whatsappIcon from "../../../assets/static/icons/whatsapp-icon.svg";
+import emailIcon from "../../../assets/static/icons/email-icon.svg";
+import phoneIcon from "../../../assets/static/icons/phone-icon.svg";
 
 const Footer = () => {
 	return (

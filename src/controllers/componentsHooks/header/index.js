@@ -1,8 +1,10 @@
 import classNames from "classnames";
+import { useEffect, useState } from "react";
 import { navbarMenuData } from "./navbarMenuData.js";
 
 const useHeader = () => {
-	const isHome = useSelector((state) => state.home);
+	// const isHome = useSelector((state) => state.home);
+	const isHome = true;
 
 	const [currentHeaderClass, setHeaderClass] = useState(
 		isHome ? classNames("header-container", "transparent") : "header-container",
@@ -43,6 +45,7 @@ const useHeader = () => {
 		navbarMenuData,
 		currentHeaderClass,
 		headerIcons,
+		sideNavbar,
 	};
 };
 

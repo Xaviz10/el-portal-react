@@ -1,18 +1,18 @@
 import React from "react";
-import "../assets/styles/components/Header.scss";
+import "../../../assets/styles/components/Header.scss";
 import { Link } from "react-router-dom";
 
-import headerElPortalWhiteIcon from "../assets/static/icons/icon-header-elportal--white.svg";
-import headerElPortalBlackIcon from "../assets/static/icons/icon-header-elportal--black.svg";
-import hamButtonBlack from "../assets/static/icons/ham-button--black.svg";
-import hamButtonWhite from "../assets/static/icons/ham-button--white.svg";
-import closeIcon from "../assets/static/icons/close-icon.svg";
+import headerElPortalWhiteIcon from "../../../assets/static/icons/icon-header-elportal--white.svg";
+import headerElPortalBlackIcon from "../../../assets/static/icons/icon-header-elportal--black.svg";
+import hamButtonBlack from "../../../assets/static/icons/ham-button--black.svg";
+import hamButtonWhite from "../../../assets/static/icons/ham-button--white.svg";
+import closeIcon from "../../../assets/static/icons/close-icon.svg";
 import useControllers from "../../../controllers";
 
 const Header = () => {
 	const { useComponentsHooks } = useControllers();
 	const { useHeader } = useComponentsHooks();
-	const { navbarMenuData, currentHeaderClass, headerIcons } = useHeader();
+	const { navbarMenuData, currentHeaderClass, headerIcons, sideNavbar } = useHeader();
 	return (
 		<header className={currentHeaderClass}>
 			<Link to="/" className="header__logo">

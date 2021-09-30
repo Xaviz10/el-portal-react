@@ -1,8 +1,9 @@
 import React from "react";
+import useComponents from "..";
 import "../../../assets/styles/components/PropertyDescription.scss";
-import PropertyDescriptionSlider from "./PropertyDescriptionSlider";
 
 const PropertyDescription = (props) => {
+	const { GallerySlider } = useComponents();
 	const { title, price, code, type, details, complements, description, images } = props;
 	// Create our number formatter.
 	let formatterCurrency = new Intl.NumberFormat("es-CO", {
@@ -13,7 +14,7 @@ const PropertyDescription = (props) => {
 
 	return (
 		<section className="main-property-description-container">
-			<PropertyDescriptionSlider imagesArray={images} />
+			<GallerySlider imagesArray={images} />
 
 			<div className="property-description-footer">
 				<h3 className="property-description-footer__title">{`${title}`}</h3>

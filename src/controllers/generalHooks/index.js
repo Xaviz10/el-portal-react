@@ -1,5 +1,5 @@
 const useGeneralHooks = () => {
-  return {};
+	return {};
 };
 
 export default useGeneralHooks;

@@ -91,7 +91,7 @@
 	height: 20px;
 	margin-top: 12px;
 
-	background-image: $areaIcon;
+	background-image: url("../../static/icons/area-icon.svg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -125,7 +125,7 @@
 	height: 20px;
 	margin-top: 12px;
 
-	background-image: $roomsIcon;
+	background-image: url("../../static/icons/rooms-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -159,7 +159,7 @@
 	height: 20px;
 	margin-top: 12px;
 
-	background-image: $bathIcon;
+	background-image: url("../../static/icons/bath-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;

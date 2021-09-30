@@ -51,7 +51,7 @@
 	position: absolute;
 	width: 30px;
 	height: 30px;
-	background-image: $leftArrowIcon;
+	background-image: url("../../static/icons/left-arrow-icon.svg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -75,7 +75,7 @@
 	position: absolute;
 	width: 30px;
 	height: 30px;
-	background-image: $rightArrowIcon;
+	background-image: url("../../static/icons/right-arrow-icon.svg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;

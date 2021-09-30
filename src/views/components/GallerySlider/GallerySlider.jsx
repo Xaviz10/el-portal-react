@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import "../assets/styles/components/GallerySlider.scss";
-
-import leftArrowIcon from "../assets/static/icons/left-arrow-icon.svg";
-import rightArrowIcon from "../assets/static/icons/right-arrow-icon.svg";
+import "../../../assets/styles/components/GallerySlider.scss";
 import useControllers from "../../../controllers";
 
 const GallerySlider = ({ imagesArray }) => {

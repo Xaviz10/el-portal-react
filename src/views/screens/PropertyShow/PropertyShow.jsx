@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import useComponents from "../../components";
-import { setHeaderHome } from "../actions";
+// import { setHeaderHome } from "../../../actions";
 
 const PropertyShow = (props) => {
 	const { PropertyDescription } = useComponents();
@@ -10,9 +10,9 @@ const PropertyShow = (props) => {
 	const dataProperties = useSelector((state) => state.properties);
 	const dispatch = useDispatch();
 
-	useEffect(() => {
-		dispatch(setHeaderHome(false));
-	}, []);
+	// useEffect(() => {
+	// 	dispatch(setHeaderHome(false));
+	// }, []);
 
 	const memoDataPropertyShow = useMemo(() => {
 		return dataProperties.find((propertyShow) => propertyShow.code === code);

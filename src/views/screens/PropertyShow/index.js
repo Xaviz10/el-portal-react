@@ -1,3 +1,3 @@
-import PropertyShow from "./Property";
+import PropertyShow from "./PropertyShow";
 
 export default PropertyShow;
