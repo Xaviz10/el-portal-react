@@ -8,13 +8,21 @@ const useFindOutCardsReducers = () => {
 	const { createReducer } = useCreateReducer();
 
 	const { useTypes } = useStrings();
-	const { GET_FEATURED_PROPERTIES } = useTypes();
+	const { GET_FIND_OUT_CARDS } = useTypes();
 
 	//InitalStates
-	const { usePropertiesInitialStates } = useIntialStates();
-	const { useFindOutCardsInitialStates } = usePropertiesInitialStates();
+	const { useFindOutCardsInitialStates } = useIntialStates();
+	const { findOutCardsInitialStates } = useFindOutCardsInitialStates();
 
-	return {};
+	const findOutCards = createReducer(findOutCardsInitialStates, {
+		[GET_FIND_OUT_CARDS](state) {
+			return {
+				...state,
+			};
+		},
+	});
+
+	return { findOutCards };
 };
 
 export default useFindOutCardsReducers;
