@@ -10,7 +10,7 @@ const Home = () => {
 	//Controllers
 	const { useScreensHooks } = useControllers();
 	const { useHome } = useScreensHooks();
-	const { featuredPropertiesToShow } = useHome();
+	const { featuredPropertiesToShow, findOutCardsToShow } = useHome();
 
 	return (
 		<>
@@ -33,6 +33,22 @@ const Home = () => {
 				</Carousel>
 			</Suspense>
 			<CallToAction />
+			<Suspense fallback={<div>Loading... </div>}>
+				<Carousel>
+					{_.map(findOutCardsToShow, (findOutCard) => {
+						const { id, cardImg, description, redirectTo, buttonName } = findOutCard;
+						return (
+							<FindOutCard
+								key={id}
+								cardImg={cardImg}
+								description={description}
+								redirectTo={redirectTo}
+								buttonName={buttonName}
+							/>
+						);
+					})}
+				</Carousel>
+			</Suspense>
 			{/* <Carousel>
 				<FindOutCard />
 			</Carousel> */}

@@ -9,6 +9,7 @@ const usePropertiesReducers = () => {
 
 	const { useTypes } = useStrings();
 	const { GET_FEATURED_PROPERTIES } = useTypes();
+
 	//InitalStates
 	const { usePropertiesInitialStates } = useIntialStates();
 	const { featuredPropertiesInitialState } = usePropertiesInitialStates();

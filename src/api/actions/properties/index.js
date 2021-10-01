@@ -4,14 +4,14 @@ const usePropertiesActions = () => {
 	const { useTypes } = useStrings();
 	const { usePropertiesTypes } = useTypes();
 	const { GET_FEATURED_PROPERTIES } = usePropertiesTypes();
-	const actSetFeaturedProperties = () => (dispatch) => {
+	const actGetFeaturedProperties = () => (dispatch) => {
 		dispatch({
 			type: GET_FEATURED_PROPERTIES,
 		});
 	};
 
 	return {
-		actSetFeaturedProperties,
+		actGetFeaturedProperties,
 	};
 };
 
