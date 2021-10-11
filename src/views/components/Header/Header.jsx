@@ -12,7 +12,8 @@ import useControllers from "../../../controllers";
 const Header = () => {
 	const { useComponentsHooks } = useControllers();
 	const { useHeader } = useComponentsHooks();
-	const { navbarMenuData, currentHeaderClass, headerIcons, sideNavbar } = useHeader();
+	const { navbarMenuData, currentHeaderClass, headerIcons, sideNavbar, sideNavbarToggle } =
+		useHeader();
 	return (
 		<header className={currentHeaderClass}>
 			<Link to="/" className="header__logo">

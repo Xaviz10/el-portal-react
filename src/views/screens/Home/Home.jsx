@@ -18,17 +18,7 @@ const Home = () => {
 			<Suspense fallback={<div>Loading... </div>}>
 				<Carousel>
 					{_.map(featuredPropertiesToShow, (property) => {
-						return (
-							<PropertyCard
-								key={property.code}
-								title={property.title}
-								price={property.price}
-								code={property.code}
-								type={property.type}
-								details={property.details}
-								images={property.images}
-							/>
-						);
+						return <PropertyCard key={property.code} property={property} />;
 					})}
 				</Carousel>
 			</Suspense>

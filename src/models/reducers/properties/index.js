@@ -8,14 +8,25 @@ const usePropertiesReducers = () => {
 	const { createReducer } = useCreateReducer();
 
 	const { useTypes } = useStrings();
-	const { GET_FEATURED_PROPERTIES } = useTypes();
+	const { usePropertiesTypes } = useTypes();
+	const { GET_FEATURED_PROPERTIES, SET_PROPERTY_TO_SHOW } = usePropertiesTypes();
 
 	//InitalStates
 	const { usePropertiesInitialStates } = useIntialStates();
-	const { featuredPropertiesInitialState } = usePropertiesInitialStates();
+	const { featuredPropertiesInitialState, propertyToShowInitialState } =
+		usePropertiesInitialStates();
 
 	const featuredProperties = createReducer(featuredPropertiesInitialState, {
-		[GET_FEATURED_PROPERTIES](state) {
+		[GET_FEATURED_PROPERTIES](state, action) {
+			return {
+				...state,
+				...action.payload,
+			};
+		},
+	});
+
+	const propertyToShow = createReducer(propertyToShowInitialState, {
+		[SET_PROPERTY_TO_SHOW](state, action) {
 			return {
 				...state,
 			};

@@ -1,15 +1,17 @@
 import classNames from "classnames";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router";
 import { navbarMenuData } from "./navbarMenuData.js";
 
 const useHeader = () => {
 	// const isHome = useSelector((state) => state.home);
-	const isHome = true;
+	const { pathname } = useLocation();
+	const isHome = () => pathname.includes("home");
 
 	const [currentHeaderClass, setHeaderClass] = useState(
 		isHome ? classNames("header-container", "transparent") : "header-container",
 	);
-	const [headerIcons, setHeaderIcons] = useState(isHome ? true : false);
+	const [headerIcons, setHeaderIcons] = useState(isHome() ? true : false);
 	const [sideNavbar, setSideNavbar] = useState({
 		toggle: false,
 		class: "header__menu--side-navbar",
@@ -20,10 +22,10 @@ const useHeader = () => {
 	}, [isHome]);
 
 	const navbarStatus = () => {
-		if ((isHome && window.scrollY >= 80) || !isHome) {
+		if ((isHome() && window.scrollY >= 80) || !isHome()) {
 			setHeaderIcons(false);
 			setHeaderClass("header-container");
-		} else if (isHome && window.scrollY < 80) {
+		} else if (isHome() && window.scrollY < 80) {
 			setHeaderIcons(true);
 			setHeaderClass(classNames("header-container", "transparent"));
 		}
@@ -46,6 +48,7 @@ const useHeader = () => {
 		currentHeaderClass,
 		headerIcons,
 		sideNavbar,
+		sideNavbarToggle,
 	};
 };
 
