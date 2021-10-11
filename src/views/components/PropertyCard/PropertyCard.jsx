@@ -1,14 +1,22 @@
 import React from "react";
 import "../../../assets/styles/components/PropertyCard.scss";
+import useControllers from "../../../controllers";
 import useHelpers from "../../../helpers";
 
-const PropertyCard = ({ title, price, code, type, details, images }) => {
+const PropertyCard = ({ property }) => {
+	const { title, price, code, type, details, images } = property;
+
+	const { useComponentsHooks } = useControllers();
+	const { usePropertyCard } = useComponentsHooks();
+	const { handleShowProperty } = usePropertyCard({ property });
+
 	const { useQuickFunctions } = useHelpers();
 	const { formatterCurrency } = useQuickFunctions();
 	return (
 		<article
 			className="main-property-card-container"
 			style={{ backgroundImage: `url(${images[0]})` }}
+			onClick={handleShowProperty}
 		>
 			<div className="property-card-footer">
 				<p className="property-card-footer__title">
