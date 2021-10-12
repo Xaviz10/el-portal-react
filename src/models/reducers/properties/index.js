@@ -29,10 +29,14 @@ const usePropertiesReducers = () => {
 		[SET_PROPERTY_TO_SHOW](state, action) {
 			return {
 				...state,
+				...action.payload,
 			};
 		},
 	});
-	return { featuredProperties };
+	return {
+		featuredProperties,
+		propertyToShow,
+	};
 };
 
 export default usePropertiesReducers;

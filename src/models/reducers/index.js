@@ -3,10 +3,11 @@ import useFindOutCardsReducers from "./findOutCards";
 import usePropertiesReducers from "./properties";
 const useReducers = () => {
 	const { findOutCards } = useFindOutCardsReducers();
-	const { featuredProperties } = usePropertiesReducers();
+	const { featuredProperties, propertyToShow } = usePropertiesReducers();
 	return combineReducers({
-		featuredProperties,
 		findOutCards,
+		featuredProperties,
+		propertyToShow,
 	});
 };
 

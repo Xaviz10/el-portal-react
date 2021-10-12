@@ -1,12 +1,12 @@
 import Home from "./Home";
 import NewProperty from "./NewProperty";
-import PropertyShow from "./PropertyShow";
+import Property from "./Property";
 
 const useScreens = () => {
 	return {
 		Home,
 		NewProperty,
-		PropertyShow,
+		Property,
 	};
 };
 

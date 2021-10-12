@@ -1,16 +1,24 @@
-import React from "react";
+import React, { Suspense } from "react";
 import useComponents from "..";
 import "../../../assets/styles/components/PropertyDescription.scss";
+import useControllers from "../../../controllers";
+import useHelpers from "../../../helpers";
 
-const PropertyDescription = (props) => {
+const PropertyDescription = () => {
+	//Components
 	const { GallerySlider } = useComponents();
-	const { title, price, code, type, details, complements, description, images } = props;
-	// Create our number formatter.
-	let formatterCurrency = new Intl.NumberFormat("es-CO", {
-		style: "currency",
-		currency: "COP",
-		maximumFractionDigits: "0",
-	});
+
+	//Controllers
+	const { useComponentsHooks } = useControllers();
+	const { usePropertyDescription } = useComponentsHooks();
+	const { property } = usePropertyDescription();
+
+	//Quick Functions
+	const { useQuickFunctions } = useHelpers();
+	const { formatterCurrency } = useQuickFunctions();
+
+	//Variables
+	const { title, price, code, type, details, complements, description, images } = property;
 
 	return (
 		<section className="main-property-description-container">
@@ -28,59 +36,59 @@ const PropertyDescription = (props) => {
 						<span>Código</span>
 					</div>
 					<div className="details__area">
-						<span style={{ backgroundImage: `url(${areaIcon})` }}></span>
+						<span></span>
 						<p>
 							{`${details.area}`} m<sup>2</sup>
 						</p>
 					</div>
 					<div className="details__rooms">
-						<span style={{ backgroundImage: `url(${roomsIcon})` }}></span>
+						<span></span>
 						<p>{`${details.rooms}`} habs. </p>
 					</div>
 					<div className="details__baths">
-						<span style={{ backgroundImage: `url(${bathIcon})` }}></span>
+						<span></span>
 						<p>{`${details.bathrooms}`} b.</p>
 					</div>
 
 					<div className="details__parking">
-						<span style={{ backgroundImage: `url(${parkingIcon})` }}></span>
+						<span></span>
 						<p>{`${details.parking}`} p.</p>
 					</div>
 				</div>
 
 				<div className="property-description-footer__complement">
 					<div className="property-description-complement complement__area-price">
-						<span style={{ backgroundImage: `url(${areaPriceIcon})` }}></span>
+						<span></span>
 						<h4>{`${formatterCurrency.format(Math.round(price / details.area, -1))}`}</h4>
 						<p>
 							Valor / m<sup>2</sup>
 						</p>
 					</div>
 					<div className="property-description-complement complement__administration">
-						<span style={{ backgroundImage: `url(${adminIcon})` }}></span>
+						<span></span>
 						<h4>{`${formatterCurrency.format(details.adminValue)}`}</h4>
 						<p>Administración</p>
 					</div>
 					<div className="property-description-complement complement__year">
-						<span style={{ backgroundImage: `url(${propertyYearIcon})` }}></span>
+						<span></span>
 						<h4>{`${details.year}`}</h4>
 						<p>Año de construcción</p>
 					</div>
 
 					<div className="property-description-complement complement__status-level">
-						<span style={{ backgroundImage: `url(${statusIcon})` }}></span>
+						<span></span>
 						<h4>{`${details.statusLevel}`}</h4>
 						<p>Estrato</p>
 					</div>
 
 					<div className="property-description-complement complement__flat">
-						<span style={{ backgroundImage: `url(${flatIcon})` }}></span>
+						<span></span>
 						<h4>{`${details.flat}`}</h4>
 						<p>Piso</p>
 					</div>
 
 					<div className="property-description-complement complement__subsidy">
-						<span style={{ backgroundImage: `url(${subsidyIcon})` }}></span>
+						<span></span>
 						<h4>{details.subsidy ? "Apto" : "No Apto"}</h4>
 						<p>Subsidio gobierno</p>
 					</div>
