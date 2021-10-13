@@ -13,7 +13,19 @@ const usePropertiesSelectors = () => {
 			};
 		},
 	);
-	return { feturedPropertiesSelector };
+
+	const propertyToShowSelector = createSelector(
+		(state) => state.propertyToShow,
+		(propertyToShow) => {
+			return {
+				...propertyToShow,
+			};
+		},
+	);
+	return {
+		feturedPropertiesSelector,
+		propertyToShowSelector,
+	};
 };
 
 export default usePropertiesSelectors;

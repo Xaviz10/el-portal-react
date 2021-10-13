@@ -16,7 +16,6 @@ const useHome = () => {
 	const { findOutCardsSelector } = useFindOutCardsSelectors();
 	const featuredProperties = useSelector(feturedPropertiesSelector);
 	const findOutCards = useSelector(findOutCardsSelector);
-	console.log({ findOutCards });
 
 	//States
 	const [featuredPropertiesToShow, setFeaturedPropertiesToShow] = useState([]);

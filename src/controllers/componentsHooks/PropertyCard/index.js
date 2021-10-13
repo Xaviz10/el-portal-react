@@ -9,7 +9,6 @@ const usePropertyCard = ({ property }) => {
 	const { push } = useHistory();
 
 	const handleRedirectToProperty = () => {
-		console.log("success");
 		push(`/property/${property.code}`);
 	};
 

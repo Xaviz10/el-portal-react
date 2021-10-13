@@ -1,23 +1,31 @@
-import { useState } from "react";
+import useModels from "../../../models";
+import leftArrowIcon from "../../../assets/static/icons/left-arrow-icon.svg";
+import rightArrowIcon from "../../../assets/static/icons/right-arrow-icon.svg";
 
 const useGallerySlider = () => {
-	//current state and the functions that updates
-	const [current, setCurrent] = useState(0);
-	const length = imagesArray ? imagesArray.length : 0;
+	const { useSelectors } = useModels();
+	const { useSelector, usePropertiesSelectors } = useSelectors();
+	const { propertyToShowSelector } = usePropertiesSelectors();
+	const { images } = useSelector(propertyToShowSelector);
 
-	//Functions for the slides management
-	const nextSlide = () => {
-		setCurrent(current === length - 1 ? 0 : current + 1);
-	};
+	const imagesToGallery = images.map((image) => ({
+		src: image,
+	}));
 
-	const prevSlide = () => {
-		setCurrent(current === 0 ? length - 1 : current - 1);
+	const inLineStyle = {
+		position: "relative",
+		width: "100%",
+		minWidth: "400px",
+		maxWidth: "1000px",
+		height: "65vh",
 	};
 
 	return {
-		current,
-		nextSlide,
-		prevSlide,
+		images,
+		imagesToGallery,
+		inLineStyle,
+		leftArrowIcon,
+		rightArrowIcon,
 	};
 };
 

@@ -16,11 +16,11 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+	// align-items: center;
 	flex-wrap: wrap;
 	width: 100%;
-	min-width: 320px;
-	padding: 50px 0;
+	min-width: 400px;
+	padding: 60px 0;
 	padding-bottom: 20px;
 	text-align: center;
 }
@@ -108,12 +108,19 @@
 }
 
 .property-description-footer {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	max-width: 420px;
+	max-width: 400px;
 	height: auto;
 	padding: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+	.property-description-footer {
+		max-width: 1000px;
+	}
 }
 
 .property-description-footer__title {
@@ -332,20 +339,35 @@
 	width: 30px;
 	height: 30px;
 
-	background-image: url("../../static/icons/icon-header-elportal--white.svg");
+	background-image: url("../../static/icons/parking-icon.svg");
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 }
 
-.property-description-footer__complement {
+.property-description-footer .property-description-footer__complement {
 	display: flex;
 	flex-wrap: wrap;
+	// justify-content: center;
+	width: 100%;
+	max-width: 1400px;
+	height: auto;
 	text-align: left;
 }
 
+@media screen and (max-width: 1400px) {
+	.property-description-footer .property-description-footer__complement {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.property-description-footer .property-description-footer__complement {
+		justify-content: left;
+	}
+}
 .property-description-footer__complement > * {
-	flex: 0 1 20em;
+	flex: 0 1 22em;
 }
 
 .property-description-footer__complement .property-description-complement {
@@ -427,13 +449,17 @@
 .property-description-characteristics {
 	position: relative;
 	width: calc(100% - 40px);
-	max-width: 1100px;
-	margin: 0 20px;
+	max-width: 1400px;
+	margin: 20px;
 	text-align: left;
 
 	border-top: 2px solid rgba(207, 207, 207, 0.5);
 }
-
+@media screen and (max-width: 1400px) {
+	.property-description-characteristics {
+		max-width: 1000px;
+	}
+}
 .property-description-characteristics__title {
 	width: 100%;
 	margin: 20px 0;
@@ -503,7 +529,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	max-width: 720px;
+	max-width: 1000px;
 	margin: 20px;
 	padding: 10px;
 
@@ -513,7 +539,7 @@
 
 .property-description-map-contact-container .property__map {
 	min-width: 320px;
-	max-width: 720px;
+	max-width: 1000px;
 	height: 420px;
 	/* border: 1px solid $soft-black); */
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);

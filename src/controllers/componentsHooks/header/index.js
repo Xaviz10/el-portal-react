@@ -17,9 +17,9 @@ const useHeader = () => {
 		class: "header__menu--side-navbar",
 	});
 
-	useEffect(() => {
-		navbarStatus();
-	}, [isHome]);
+	// useEffect(() => {
+	// 	navbarStatus();
+	// }, [isHome]);
 
 	const navbarStatus = () => {
 		if ((isHome() && window.scrollY >= 80) || !isHome()) {

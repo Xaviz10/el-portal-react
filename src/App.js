@@ -14,7 +14,7 @@ const App = () => {
 
 	// Views
 	const { useScreens, useLayouts } = useViews();
-	const { Home, NewProperty, PropertyShow } = useScreens();
+	const { Home, NewProperty, Property } = useScreens();
 	const { Layout } = useLayouts();
 
 	return (
@@ -32,7 +32,7 @@ const App = () => {
 									}}
 								/>
 								<Route exact path="/home" component={Home} />
-								<Route exact path="/property/:code" component={PropertyShow} />
+								<Route exact path="/property/:code" component={Property} />
 								<Route exact path="/publicar" component={NewProperty} />
 							</Switch>
 						</Layout>
