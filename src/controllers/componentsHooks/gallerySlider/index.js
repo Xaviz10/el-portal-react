@@ -15,8 +15,9 @@ const useGallerySlider = () => {
 	const inLineStyle = {
 		position: "relative",
 		width: "100%",
-		maxWidth: "1400px",
-		height: "70vh",
+		minWidth: "400px",
+		maxWidth: "1000px",
+		height: "65vh",
 	};
 
 	return {
